@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MarvellousService } from './marvellous.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ServiceDemo';
+
+  constructor(private obj : MarvellousService)
+  {
+    this.fun();
+  }
+
+  fun()
+  {
+      this.obj.timepass();
+  }
 }
